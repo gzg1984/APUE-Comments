@@ -10,8 +10,133 @@
 			<key>comments_file_content</key>
 			<dict>
 				<key>FileComments</key>
-				<string>读取目录信息
-改变输出颜色</string>
+				<string>sys_access</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>12</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>920E28B7-E64B-4750-A078-380E0B5E2AEB</key>
+							<dict>
+								<key>line</key>
+								<string>158</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_access</string>
+							</dict>
+							<key>CBD40A80-2C52-4B77-A956-89455893EC53</key>
+							<dict>
+								<key>line</key>
+								<string>522</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>open.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE2(access</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>B13819AC-00A1-4337-9D33-0DAED31E8CD5</string>
+							<key>UniqComment</key>
+							<string>sys_access
+用来判断是非有对应权限</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/access.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>chdir
+改变当前进程的当前目录数据</string>
+				<key>Group</key>
+				<string>task</string>
+				<key>LineComments</key>
+				<dict>
+					<key>10</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>534C7E99-6B7A-4334-BD3F-381F02F9082E</key>
+							<dict>
+								<key>line</key>
+								<string>527</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>open.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE1(chdir</string>
+							</dict>
+							<key>BE843B64-5112-4CCA-8B6D-BC3D00E1F7F2</key>
+							<dict>
+								<key>line</key>
+								<string>192</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_chdir</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>451C8EC4-4183-420C-B5E9-494AF73E1A95</string>
+							<key>UniqComment</key>
+							<string>改变当前路径</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/cd.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>chown caller</string>
+				<key>Group</key>
+				<string>fs</string>
 				<key>LineComments</key>
 				<dict>
 					<key>11</key>
@@ -19,6 +144,326 @@
 						<key>InterFileLink</key>
 						<dict/>
 						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>AF5CC5E1-1EB8-412B-B234-BF02E5EAB342</key>
+							<dict>
+								<key>line</key>
+								<string>331</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_chown</string>
+							</dict>
+							<key>CCE49AE1-4BD8-4B32-A60E-95A9A6629CE3</key>
+							<dict>
+								<key>line</key>
+								<string>692</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>open.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE3(chown</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>58C6D9DC-5144-45A5-9DCD-9B67ADBCA419</string>
+							<key>UniqComment</key>
+							<string>chang the group of file</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/chgrp.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>chmod caller</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>20</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>33578FF3-B0F3-4F03-B1A0-B24E6E7F2AAE</string>
+							<key>UniqComment</key>
+							<string>获取当前的状态</string>
+						</dict>
+					</dict>
+					<key>29</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>1577D720-AE30-4F47-9C41-3C0ED06456D6</key>
+							<dict>
+								<key>line</key>
+								<string>276</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_chmod</string>
+							</dict>
+							<key>28FABC06-168A-4656-BC29-47967D18FBE5</key>
+							<dict>
+								<key>line</key>
+								<string>662</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>open.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE2(chmod</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>51BBBD16-4482-4B3E-B350-17C014A4967A</string>
+							<key>UniqComment</key>
+							<string>change mode of file</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/chmod.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>chown caller
+</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>11</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>CE0E20C2-FF6C-48CA-A5D1-4C17011566A9</key>
+							<dict>
+								<key>line</key>
+								<string>692</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>open.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE3(chown</string>
+							</dict>
+							<key>ED1946F3-99AA-4551-AE44-58B9582C12C0</key>
+							<dict>
+								<key>line</key>
+								<string>331</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_chown</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>B2135461-83CC-4E47-AC18-5FAE33CE2AA5</string>
+							<key>UniqComment</key>
+							<string>change the owner of file</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/chown.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>fcntl系统调用的演示</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>14</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>FB785CD3-F882-4128-BC7A-789BA7ADD53E</string>
+							<key>UniqComment</key>
+							<string>设置文件标志位信息</string>
+						</dict>
+					</dict>
+					<key>21</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>C69662EE-EC4F-47AA-A3A0-85B545B9225B</string>
+							<key>UniqComment</key>
+							<string>清除某个标志位的统一接口函数</string>
+						</dict>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>D50D9194-3CC3-4AE0-8C01-05ECD7B14754</string>
+							<key>UniqComment</key>
+							<string>设置某个标志位的统一接口函数</string>
+						</dict>
+					</dict>
+					<key>7</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>809FF56B-F076-4249-AF0B-7F990B8A3314</key>
+							<dict>
+								<key>line</key>
+								<string>66</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>fcntl.c</string>
+								<key>tip</key>
+								<string>sys_fcntl</string>
+							</dict>
+							<key>EE52613C-E518-4900-B645-76EBCE542FB1</key>
+							<dict>
+								<key>line</key>
+								<string>421</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux-2.6.32.67.bundle</string>
+								<key>realname</key>
+								<string>fcntl.c.z</string>
+								<key>tip</key>
+								<string>SYSCALL_DEFINE3(fcntl,</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>FB6F325F-6B4E-47FB-8F2D-8F34083825C3</string>
+							<key>UniqComment</key>
+							<string>获取文件标志位信息</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/fcntl.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>读取目录信息
+改变输出颜色</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>11</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
 						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
@@ -36,6 +481,8 @@
 						<dict/>
 						<key>InterLink</key>
 						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
 						<key>UniqComment</key>
@@ -51,6 +498,8 @@
 						<key>InterFileLink</key>
 						<dict/>
 						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
 						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
@@ -68,6 +517,8 @@
 						<dict/>
 						<key>InterLink</key>
 						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
 						<key>UniqComment</key>
@@ -83,6 +534,8 @@
 						<key>InterFileLink</key>
 						<dict/>
 						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
 						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
@@ -115,6 +568,19 @@
 								<key>tip</key>
 								<string>old_readdir</string>
 							</dict>
+							<key>3B67D076-6F0C-41BF-AF30-AE903AB515BF</key>
+							<dict>
+								<key>line</key>
+								<string>19</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>read_write.c</string>
+								<key>tip</key>
+								<string>sys_readdir</string>
+							</dict>
 							<key>47CE2AF3-7976-4B9E-AB96-E8E53FC61313</key>
 							<dict>
 								<key>line</key>
@@ -145,6 +611,8 @@
 						<dict/>
 						<key>InterLink</key>
 						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
 						<key>UniqComment</key>
@@ -160,6 +628,8 @@
 						<key>InterFileLink</key>
 						<dict/>
 						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
 						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
@@ -177,6 +647,8 @@
 						<dict/>
 						<key>InterLink</key>
 						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
 						<key>TimeLineComments</key>
 						<array/>
 						<key>UniqComment</key>
@@ -188,6 +660,39 @@
 						</dict>
 					</dict>
 				</dict>
+				<key>TimeLine</key>
+				<array>
+					<dict>
+						<key>Comments</key>
+						<string>读取目录信息
+改变输出颜色</string>
+						<key>Owner</key>
+						<string>一月四日名字</string>
+						<key>OwnerUUID</key>
+						<string>40FC36FC-CC03-4473-90C8-B1FAF2158C60</string>
+						<key>UUID</key>
+						<string>8E9487D4-C21A-480D-96E2-8BA81EE8738E</string>
+						<key>time</key>
+						<string>2016-03-05 10:31:07</string>
+						<key>type</key>
+						<string>Normal</string>
+					</dict>
+					<dict>
+						<key>Comments</key>
+						<string>读取目录信息
+改变输出颜色</string>
+						<key>Owner</key>
+						<string>Gordon</string>
+						<key>OwnerUUID</key>
+						<string>40FC36FC-CC03-4473-90C8-B1FAF2158C60</string>
+						<key>UUID</key>
+						<string>64B54884-6915-4D4C-B4A2-2F6F6695F041</string>
+						<key>time</key>
+						<string>2016-03-05 13:32:39</string>
+						<key>type</key>
+						<string>Normal</string>
+					</dict>
+				</array>
 				<key>comments-version</key>
 				<string>LineCommentV2</string>
 			</dict>
@@ -196,11 +701,11 @@
 		</dict>
 	</array>
 	<key>owner</key>
-	<string>一月四日名字</string>
+	<string>Gordon</string>
 	<key>project_name</key>
 	<string>APUE-master</string>
 	<key>time</key>
-	<string>2016-03-05 10:17:00</string>
+	<string>2016-03-07 09:13:03</string>
 	<key>version</key>
 	<string>c-p-3</string>
 </dict>
