@@ -57,7 +57,12 @@
 							<key>UUID</key>
 							<string>B13819AC-00A1-4337-9D33-0DAED31E8CD5</string>
 							<key>UniqComment</key>
-							<string>sys_access
+							<string>call sys_access in kernel to check if the caller process CAN access the target file with the (Read) operation.
+Parameter 1: path string of target file
+Parameter 2: the operation. In this case the R_OK means read
+
+Try "man access" on Linux machine to get more details.
+
 用来判断是非有对应权限</string>
 						</dict>
 					</dict>
@@ -215,7 +220,8 @@
 							<key>UUID</key>
 							<string>33578FF3-B0F3-4F03-B1A0-B24E6E7F2AAE</string>
 							<key>UniqComment</key>
-							<string>获取当前的状态</string>
+							<string>Get file status containing file mode 
+获取当前的状态</string>
 						</dict>
 					</dict>
 					<key>29</key>
@@ -336,7 +342,70 @@
 			<key>comments_file_content</key>
 			<dict>
 				<key>FileComments</key>
-				<string>fcntl系统调用的演示</string>
+				<string>get time from system
+</string>
+				<key>Group</key>
+				<string>system</string>
+				<key>LineComments</key>
+				<dict>
+					<key>15</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>86327A34-EB4C-400A-8453-4F3C85400812</key>
+							<dict>
+								<key>line</key>
+								<string>385</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sys.c</string>
+								<key>tip</key>
+								<string>sys_times</string>
+							</dict>
+							<key>A5D5F219-F46D-4125-AD25-F21D6CBE2354</key>
+							<dict>
+								<key>line</key>
+								<string>81</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>time.c</string>
+								<key>tip</key>
+								<string> sys_time</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>81A45EED-D9E3-4E94-AB31-2227FCE1BBD4</string>
+							<key>UniqComment</key>
+							<string>get time from system</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/date.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>Call fcntl to get or set the flag of a file descriptor.
+fcntl系统调用的演示</string>
 				<key>Group</key>
 				<string>fs</string>
 				<key>LineComments</key>
@@ -356,7 +425,9 @@
 							<key>UUID</key>
 							<string>FB785CD3-F882-4128-BC7A-789BA7ADD53E</string>
 							<key>UniqComment</key>
-							<string>设置文件标志位信息</string>
+							<string>Set file flag via fcntl 
+
+设置文件标志位信息</string>
 						</dict>
 					</dict>
 					<key>21</key>
@@ -374,7 +445,9 @@
 							<key>UUID</key>
 							<string>C69662EE-EC4F-47AA-A3A0-85B545B9225B</string>
 							<key>UniqComment</key>
-							<string>清除某个标志位的统一接口函数</string>
+							<string>A API for clear a flag bit of a FD via fcntl 
+
+清除某个标志位的统一接口函数</string>
 						</dict>
 					</dict>
 					<key>4</key>
@@ -392,7 +465,8 @@
 							<key>UUID</key>
 							<string>D50D9194-3CC3-4AE0-8C01-05ECD7B14754</string>
 							<key>UniqComment</key>
-							<string>设置某个标志位的统一接口函数</string>
+							<string>Try to build a API for setting flag via fcntl 
+设置某个标志位的统一接口函数</string>
 						</dict>
 					</dict>
 					<key>7</key>
@@ -437,7 +511,9 @@
 							<key>UUID</key>
 							<string>FB6F325F-6B4E-47FB-8F2D-8F34083825C3</string>
 							<key>UniqComment</key>
-							<string>获取文件标志位信息</string>
+							<string>Get flags via fcntl 
+
+获取文件标志位信息</string>
 						</dict>
 					</dict>
 				</dict>
@@ -446,6 +522,337 @@
 			</dict>
 			<key>comments_file_name</key>
 			<string>APUE-master/fcntl.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>lstat caller</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>14</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>8F5AA91C-E0CC-48BA-B005-3E5D48031201</key>
+							<dict>
+								<key>line</key>
+								<string>121</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>stat.c</string>
+								<key>tip</key>
+								<string>sys_lstat</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>5B0E867F-73C6-4C73-924E-73259289DE97</string>
+							<key>UniqComment</key>
+							<string>call lstat of kernel
+Parameter 1:path string of target file 
+Parameter 2: buffer struct which contain the lstat results 
+
+查询文件信息，存储到buf结构体中</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/file.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>call getuid
+</string>
+				<key>Group</key>
+				<string>task</string>
+				<key>LineComments</key>
+				<dict>
+					<key>9</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>C1109780-7C0B-40BE-94C7-CED386FCFC74</key>
+							<dict>
+								<key>line</key>
+								<string>738</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sched.c</string>
+								<key>tip</key>
+								<string>sys_getuid</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>2AA69450-D098-40CA-8234-12F0FC530982</string>
+							<key>UniqComment</key>
+							<string>getuid will get user id of current task
+</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/finger.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>call uname and sethostname</string>
+				<key>Group</key>
+				<string>system</string>
+				<key>LineComments</key>
+				<dict>
+					<key>20</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>6206E60E-EABB-49A5-A21B-28223862C18B</key>
+							<dict>
+								<key>line</key>
+								<string>649</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sys.c</string>
+								<key>tip</key>
+								<string>sethostname</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>0B10D5A8-F9D3-45A2-B2FE-B7D924C3838A</string>
+							<key>UniqComment</key>
+							<string>call sethostname</string>
+						</dict>
+					</dict>
+					<key>9</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>59476CDC-27A2-40B8-8047-9B5F6A5F5201</key>
+							<dict>
+								<key>line</key>
+								<string>604</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sys.c</string>
+								<key>tip</key>
+								<string>sys_uname</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>50E05B93-BC6E-4BB4-9B53-B894EC1B5EA8</string>
+							<key>UniqComment</key>
+							<string>call uname
+uname keeps hostname as node name</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/hostname.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>how to list all signals</string>
+				<key>Group</key>
+				<string>signal</string>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/kill.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>link caller
+创建硬链接</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>18</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>F1925104-7D4E-4621-8BE7-58ADE28853CF</key>
+							<dict>
+								<key>line</key>
+								<string>656</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string> sys_link</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>C7C7DA9C-CFA3-4EB9-88F6-9B47A9379B1F</string>
+							<key>UniqComment</key>
+							<string>create a hard link via link in kernal filesystem 
+创建硬链接</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/link.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>symlink caller
+创建软链接
+</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>11</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>8B7FA674-B434-47F2-A577-8FA967976CC9</key>
+							<dict>
+								<key>line</key>
+								<string>597</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_symlink</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>DDC13E04-7D66-4A36-9FCF-7C9ECCA1E344</string>
+							<key>UniqComment</key>
+							<string>create a symbol link via system call.
+创建软链接</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/ln-s.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>gcc -O may change the result of long jump.</string>
+				<key>Group</key>
+				<string>trick</string>
+				<key>LineComments</key>
+				<dict>
+					<key>19</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict/>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>77A8680F-7681-4C0B-8076-C67E63920EE0</string>
+							<key>UniqComment</key>
+							<string>longjump is a dangerous trick which maybe cause error after "-O" compile </string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/longjmp.c.plist</string>
 		</dict>
 		<dict>
 			<key>comments_file_content</key>
@@ -692,6 +1099,22 @@
 						<key>type</key>
 						<string>Normal</string>
 					</dict>
+					<dict>
+						<key>Comments</key>
+						<string>Read folder info via readdir call 
+读取目录信息
+改变输出颜色</string>
+						<key>Owner</key>
+						<string>Gordon</string>
+						<key>OwnerUUID</key>
+						<string>40FC36FC-CC03-4473-90C8-B1FAF2158C60</string>
+						<key>UUID</key>
+						<string>D1693450-DED4-4CCB-B2E7-9B61A389544A</string>
+						<key>time</key>
+						<string>2016-05-16 23:53:22</string>
+						<key>type</key>
+						<string>Normal</string>
+					</dict>
 				</array>
 				<key>comments-version</key>
 				<string>LineCommentV2</string>
@@ -699,13 +1122,688 @@
 			<key>comments_file_name</key>
 			<string>APUE-master/ls.c.plist</string>
 		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>mkdir</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>12</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>24927788-ADD6-4678-ADE4-7F63DC4944F8</key>
+							<dict>
+								<key>line</key>
+								<string>471</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string> sys_mkdir</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>01D7A173-F9E4-4A79-80EE-62246A550F20</string>
+							<key>UniqComment</key>
+							<string>make directory
+创建目录</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/mkdir.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>rename caller
+</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>12</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>F28BB5D7-9D55-4002-B095-8599C01E2AAC</key>
+							<dict>
+								<key>line</key>
+								<string>733</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_rename</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>54F7819C-FB2D-4F11-8E3D-F4767DD6F2DF</string>
+							<key>UniqComment</key>
+							<string>change the name
+修改名字</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/mv.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>read link info
+</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>14</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>B9E883C1-3091-4724-BEE4-CA8CC3A7AB43</key>
+							<dict>
+								<key>line</key>
+								<string>121</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>stat.c</string>
+								<key>tip</key>
+								<string>sys_lstat</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>F28A7F4C-F5D6-4044-B6A7-E3E794ACA145</string>
+							<key>UniqComment</key>
+							<string>get the state
+获取文件类型</string>
+						</dict>
+					</dict>
+					<key>23</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>75E824F1-3570-4753-B133-8DCA2F3B42C9</key>
+							<dict>
+								<key>line</key>
+								<string>183</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>stat.c</string>
+								<key>tip</key>
+								<string>sys_readlink</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>A46E0D41-718D-4784-80BC-652046CBD13B</string>
+							<key>UniqComment</key>
+							<string>get link info
+获取链接信息</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/readlink.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>re-name caller
+</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>32</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>AE8DDFEA-162E-425A-88D9-D92558A4E60B</key>
+							<dict>
+								<key>line</key>
+								<string>733</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_rename</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>470C2668-447D-4C76-BED7-E6C3D15BF2CC</string>
+							<key>UniqComment</key>
+							<string>re-name a file
+跟换文件名字</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/rename.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>unlink caller</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>11</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>9F3EC135-81DA-414A-855D-7ED9AC01500D</key>
+							<dict>
+								<key>line</key>
+								<string>525</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>do_unlink</string>
+							</dict>
+							<key>F20543CB-9925-445A-973E-D1BF65AEE4A2</key>
+							<dict>
+								<key>line</key>
+								<string>553</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_unlink</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>60AA8791-5F58-4DC9-A936-46826D17353E</string>
+							<key>UniqComment</key>
+							<string>actually call unlink
+</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/rm.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>rmdir caller</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>10</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>2E22686A-59D6-4C47-8382-33147A222A1E</key>
+							<dict>
+								<key>line</key>
+								<string>512</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_rmdir</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>B3E8D498-F377-4FDA-8870-7141D6FD7D24</string>
+							<key>UniqComment</key>
+							<string>remove directory
+</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/rmdir.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>console status getter</string>
+				<key>Group</key>
+				<string>console</string>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/stty.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>sync buffer of vfs</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>5</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>261F4D10-C040-44A4-B54B-4A45F27B11A5</key>
+							<dict>
+								<key>line</key>
+								<string>166</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>buffer.c</string>
+								<key>tip</key>
+								<string>sys_sync</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>C17DA51C-4BEA-4C38-A961-D8D69F7B8F80</string>
+							<key>UniqComment</key>
+							<string>sync buffer caller</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/sync.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>call getrlimit</string>
+				<key>Group</key>
+				<string>system</string>
+				<key>LineComments</key>
+				<dict>
+					<key>62</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>0E3A7C02-2023-43A6-A331-999F88D5A2B2</key>
+							<dict>
+								<key>line</key>
+								<string>685</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sys.c</string>
+								<key>tip</key>
+								<string>sys_getrlimit</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>E2CCD1B4-274E-4725-BB71-9A899844EC23</string>
+							<key>UniqComment</key>
+							<string>call getrlimit</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/ulimit.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>create a file with umask</string>
+				<key>Group</key>
+				<string>task</string>
+				<key>LineComments</key>
+				<dict>
+					<key>17</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>FFF88B6B-9A7E-49D1-B0F6-8026530D92D4</key>
+							<dict>
+								<key>line</key>
+								<string>437</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_creat</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>6EFD78A7-3EC8-4B92-87CD-E0A9DFE3A92B</string>
+							<key>UniqComment</key>
+							<string>create a file</string>
+						</dict>
+					</dict>
+					<key>23</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>FC8FBC17-9F10-4CE0-A625-8B99317A3042</key>
+							<dict>
+								<key>line</key>
+								<string>390</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>mode &amp;= ~current-&gt;umask;</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>C8E3770D-8302-48C6-AB4C-C37C6CD8916D</string>
+							<key>UniqComment</key>
+							<string>umask in task info
+</string>
+						</dict>
+					</dict>
+					<key>25</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>EB3391F8-19FF-4FFC-8381-E854C3670B31</key>
+							<dict>
+								<key>line</key>
+								<string>437</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>open.c</string>
+								<key>tip</key>
+								<string>sys_creat</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>66BF05B0-EB8B-4564-BA0D-E6614E2F7A18</string>
+							<key>UniqComment</key>
+							<string>creat with umask</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/umask.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>call uname</string>
+				<key>Group</key>
+				<string>system</string>
+				<key>LineComments</key>
+				<dict>
+					<key>22</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>41B79A66-879A-4B86-ACCA-D5828B32C485</key>
+							<dict>
+								<key>line</key>
+								<string>604</string>
+								<key>offset</key>
+								<string>/kernel</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>sys.c</string>
+								<key>tip</key>
+								<string>sys_uname</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>E546E1D4-9568-46D8-9155-615D0F33B953</string>
+							<key>UniqComment</key>
+							<string>call uname
+</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/uname.c.plist</string>
+		</dict>
+		<dict>
+			<key>comments_file_content</key>
+			<dict>
+				<key>FileComments</key>
+				<string>unlink caller</string>
+				<key>Group</key>
+				<string>fs</string>
+				<key>LineComments</key>
+				<dict>
+					<key>18</key>
+					<dict>
+						<key>InterFileLink</key>
+						<dict/>
+						<key>InterLink</key>
+						<dict/>
+						<key>OtherProjectLink</key>
+						<dict>
+							<key>86864BB0-0473-42BF-AE38-64453001D6EE</key>
+							<dict>
+								<key>line</key>
+								<string>525</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>do_unlink</string>
+							</dict>
+							<key>93C8FB47-6595-4969-BE0D-A2BD61F6FE81</key>
+							<dict>
+								<key>line</key>
+								<string>553</string>
+								<key>offset</key>
+								<string>/fs</string>
+								<key>project</key>
+								<string>linux</string>
+								<key>realname</key>
+								<string>namei.c</string>
+								<key>tip</key>
+								<string>sys_unlink</string>
+							</dict>
+						</dict>
+						<key>TimeLineComments</key>
+						<array/>
+						<key>UniqComment</key>
+						<dict>
+							<key>UUID</key>
+							<string>44A24371-3B65-40C2-875B-3E7491AF3F1D</string>
+							<key>UniqComment</key>
+							<string>call unlink</string>
+						</dict>
+					</dict>
+				</dict>
+				<key>comments-version</key>
+				<string>LineCommentV2</string>
+			</dict>
+			<key>comments_file_name</key>
+			<string>APUE-master/unlink.c.plist</string>
+		</dict>
 	</array>
 	<key>owner</key>
 	<string>Gordon</string>
 	<key>project_name</key>
 	<string>APUE-master</string>
 	<key>time</key>
-	<string>2016-03-07 09:13:03</string>
+	<string>2016-06-15 00:11:22</string>
 	<key>version</key>
 	<string>c-p-3</string>
 </dict>
